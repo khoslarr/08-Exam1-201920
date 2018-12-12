@@ -74,6 +74,8 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     #            of the stair steps.
     # -------------------------------------------------------------------------
     point = starting_point
+    first_point = rg.Point(point.x, point.y)
+    first_point.attach_to(window)
     for _ in range(number_of_stairs):
         line_up = rg.Line(point, rg.Point(point.x, point.y - step_size))
         line_up.color = 'magenta'
